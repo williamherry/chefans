@@ -1,4 +1,8 @@
 Chefans::Application.routes.draw do
+  get "topics/index"
+
+  resources :topics
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
