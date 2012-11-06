@@ -1,0 +1,5 @@
+<% topics.each do |topic| %>
+  <h2><%= link_to_unless_current topic.title, topic %></h2>
+  <p><%= link_to topic.node.name, topic.node %>
+  <p><%= "published #{time_ago_in_words(topic.created_at)} ago" %></p>
+<% end %>

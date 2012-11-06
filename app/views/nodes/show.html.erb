@@ -1,0 +1,4 @@
+<h2><%= @node.name %></h2>
+<span><%= "there is #{@node.topics.count} topics" %></span>
+<p><%= @node.description %></p>
+<%= render 'topics/topic_list', topics: @node.topics %>

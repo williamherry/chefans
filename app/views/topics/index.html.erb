@@ -1,6 +1,2 @@
 <h1>Active Topics</h1>
-<% @topics.each do |topic| %>
-  <h2><%= link_to_unless_current topic.title, topic %></h2>
-  <p><%= topic.node.name %>
-  <p><%= "published #{time_ago_in_words(topic.created_at)} ago" %></p>
-<% end %>
+<%= render 'topic_list', topics: @topics %>
