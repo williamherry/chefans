@@ -1,10 +1,8 @@
 Chefans::Application.routes.draw do
-  get "nodes/show"
 
-  get "topics/index"
-
-  resources :topics
+  resources :topics, only: [:index, :show]
   resources :nodes, only: [:show]
+  resources :users, only: [:show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
