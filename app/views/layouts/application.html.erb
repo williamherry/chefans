@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Chefans</title>
+  <title>Chef Fans</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <div id="banner">
+    <%= image_tag("logo.png", size: "50x50") %>
+    <%= link_to "Chef Fans", topics_path %>
+    <%= link_to "Question", topics_path %>
+    <%= link_to "Share", topics_path %>
+  </div>
 
-<%= yield %>
+  <div id="columns">
+    <div id="question">
+      <h2>Question</h2>
+      <p>ask a question<p>
+      <%= yield %>
+    </div>
 
+  </div>
 </body>
 </html>
