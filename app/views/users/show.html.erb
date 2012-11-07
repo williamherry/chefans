@@ -2,3 +2,10 @@
   <td>Username: <%= @user.username %></td><br />
   <td>Created_at: <%= @user.created_at %></td>
 </tr>
+<br />
+
+<% @user.topics.each do |topic| %>
+  <%= link_to topic.node.name, topic.node %>
+  <%= link_to topic.title, topic %>
+  <%= "published #{time_ago_in_words(topic.created_at)} ago" %><br />
+<% end %>

@@ -4,8 +4,10 @@ one:
   title: MyString
   content: MyText
   node: one
+  author: one
 
 two:
   title: MyString
   content: MyText
   node: one
+  author: one
