@@ -1,0 +1,10 @@
+<%= form_tag sessions_path, method: :post do %>
+  <div class="field">
+    <%= label_tag :username, "Username" %>
+    <%= text_field_tag :username %>
+  </div>
+
+  <div class="action">
+    <%= submit_tag "Login" %>
+  </div>
+<% end %>

@@ -1,10 +1,15 @@
 Chefans::Application.routes.draw do
 
+  get "sessions/new"
+
   resources :topics, only: [:index, :show]
   resources :nodes, only: [:show]
   resources :users, only: [:show, :create]
 
   match "sign_up", to: "users#new"
+  match "sign_in", to: "sessions#new"
+
+  resources :sessions, only: [:create]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
